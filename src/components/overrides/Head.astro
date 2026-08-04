@@ -2,6 +2,7 @@
 import Default from "@astrojs/starlight/components/Head.astro";
 import { differenceInCalendarDays } from "date-fns";
 import "tippy.js/dist/tippy.css";
+import Analytics from "@vercel/analytics/astro";
 
 import { getEntry, getEntries } from "astro:content";
 import { getOgImage } from "~/util/og";
@@ -235,3 +236,4 @@ metaTags.map((attrs) => {
 <script src="src/scripts/mermaid.ts"></script>
 <script src="src/scripts/analytics.ts"></script>
 <Default><slot /></Default>
+<Analytics />
